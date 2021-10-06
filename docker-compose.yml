@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .docker/app
+
+  apache:
+    image: thecodingmachine/php:7.2-v4-slim-apache
