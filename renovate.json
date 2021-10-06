@@ -1,5 +1,30 @@
 {
   "extends": [
     "config:base"
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "^composer.json$"
+      ],
+      "matchStrings": [
+        "\"php\": \"~(?<currentValue>\\d+\\.\\d+)\\.\\d\""
+      ],
+      "depNameTemplate": "php",
+      "lookupNameTemplate": "thecodingmachine/php",
+      "versioningTemplate": "docker",
+      "datasourceTemplate": "docker",
+      "extractVersionTemplate": "^(?<version>\\d+\\.\\d+)",
+      "autoReplaceStringTemplate": "\"php\": \"~{{{newValue}}}.0\""
+    }
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "php",
+        "thecodingmachine/php"
+      ],
+      "groupName": "PHP"
+    }
   ]
 }
