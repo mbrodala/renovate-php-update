@@ -1,1 +1,1 @@
-FROM thecodingmachine/php:7.2-v4-fpm-node12
+FROM thecodingmachine/php:8.3-v4-fpm-node12
